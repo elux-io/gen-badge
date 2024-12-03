@@ -1,0 +1,21 @@
+name: 'Generate badges'
+description: 'Generate passing/failing/coverage badges'
+
+inputs:
+  theme:
+    description: 'Color theme (`dark` or `light`)'
+    required: true
+  status:
+    description: 'The status (`success`, `failure`)'
+  os:
+    description: 'The OS (`windows`, `linux`, `macos`, `wasm`)'
+  coverage:
+    description: 'Percentage of coverage (e.g. `12.3`)'
+
+outputs:
+  svg:
+    description: 'The SVG of the badge'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
