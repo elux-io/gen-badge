@@ -1,5 +1,5 @@
 name: 'Generate badges'
-description: 'Generate passing/failing/coverage badges'
+description: 'Generate passing/failing/coverage/lines badges'
 
 inputs:
   theme:
@@ -11,6 +11,8 @@ inputs:
     description: 'The OS (`windows`, `linux`, `macos`, `wasm`)'
   coverage:
     description: 'Percentage of coverage (e.g. `12.3`)'
+  lines_data:
+    description: 'JSON array of lines data (e.g. `[{ "title": "src/", "lines": 398 }]`)'
 
 outputs:
   svg:
